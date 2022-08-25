@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+:root {
+  --font-family: "DM Sans", sans-serif;
+  --font-bold: 700;
+  --font-regular: 400;
+  --red: hsl(10, 79%, 65%);
+  --orange: hsl(33, 100%, 98%);
+  --cyan: hsl(186, 34%, 60%);
+  --dark-brown: hsl(25, 47%, 15%);
+  --medium-brown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --font-size: 18px;
+  --padding: 1em;
+}
+/* reset */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* main style */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: var(--font-regular);
+  background-color: var(--cream);
+  font-size: var(--font-size);
+}
+
+main {
+  height: 100%;
+  max-width: 30em;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+}
+
+section {
+  width: calc(100% - 2em);
+  padding: var(--padding);
+  margin: 0 auto;
+  border-radius: 0.75em;
+}
+.amount {
+  font-size: 1.4em;
+  font-weight: var(--font-bold);
+}
+/* balance style */
+.balance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--red);
+  color: var(--cream);
+}
+.balance h3 {
+  font-size: 0.9em;
+  font-weight: var(--font-regular);
+  padding-bottom: 0.25em;
+}
+.balance__logo img {
+  display: block;
+  height: 2.25em;
+}
+
+/* spending */
+.spending {
+  background-color: var(--orange);
+  color: var(--dark-brown);
+}
+.spending h2 {
+  font-size: 1.35em;
+}
+/* graph part */
+.spending__graph-list {
+  display: grid;
+  grid-template-columns: repeat(7, calc(80% / 7));
+  justify-content: center;
+  gap: calc(20% / 7);
+  height: 12.5em;
+  width: 100%;
+}
+.spending__graph-item {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: center;
+}
+.spending__day {
+  color: var(--medium-brown);
+  font-size: 0.75em;
+  text-align: center;
+}
+.graph {
+  --bg-color: var(--red);
+  --height: 0;
+  width: 100%;
+  height: var(--height);
+  background-color: var(--bg-color);
+  border-radius: 0.25em;
+  margin: 0.5em auto;
+  cursor: pointer;
+}
+.spending__day-sum {
+  display: none;
+  color: var(--cream);
+  background-color: var(--dark-brown);
+  font-size: 1em;
+  font-weight: var(--font-bold);
+  text-align: center;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  border-radius: 0.25em;
+}
+.graph:hover {
+  opacity: 0.8;
+}
+.graph:hover + .spending__day-sum {
+  display: block;
+}
+hr {
+  margin: 1.5em 0;
+  opacity: 0.5;
+  background-color: var(--cream);
+  height: 0.2em;
+  border: none;
+  border-radius: 100vmax;
+}
+/* month part */
+.spending__month {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.spending__month p {
+  font-weight: var(--font-bold);
+}
+.spending__month h3 {
+  color: var(--medium-brown);
+  font-weight: var(--font-regular);
+  font-size: 0.85em;
+}
+.spending__month-curr {
+  line-height: 1.5;
+}
+.spending__month-prev {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+}
+.spending__month .amount {
+  font-size: 1.75em;
+}
+/* footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media (min-width: 375px) {
+  :root {
+    --font-size: 16px;
+    --padגing: 1.5em;
+  }
+}

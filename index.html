@@ -10,8 +10,80 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" type="module" defer></script>
     <title>Frontend Mentor | Expenses chart component</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <section class="balance">
+        <div class="balance__summary">
+          <h3>My balance</h3>
+          <p class="amount">$921.48</p>
+        </div>
+        <div class="balance__logo">
+          <img src="./images/logo.svg" alt="logo" />
+        </div>
+      </section>
+      <section class="spending">
+        <h2>Spending - Last 7 days</h2>
+        <ul class="spending__graph-list">
+          <li class="spending__graph-item" data-day="mon">
+            <div class="spending__day">mon</div>
+            <div class="graph"></div>
+            <div class="spending__day-sum"></div>
+          </li>
+          <li class="spending__graph-item" data-day="tue">
+            <div class="spending__day">tue</div>
+            <div class="graph"></div>
+            <div class="spending__day-sum"></div>
+          </li>
+          <li class="spending__graph-item" data-day="wed">
+            <div class="spending__day">wed</div>
+            <div class="graph"></div>
+            <div class="spending__day-sum"></div>
+          </li>
+          <li class="spending__graph-item" data-day="thu">
+            <div class="spending__day">thu</div>
+            <div class="graph"></div>
+            <div class="spending__day-sum"></div>
+          </li>
+          <li class="spending__graph-item" data-day="fri">
+            <div class="spending__day">fri</div>
+            <div class="graph"></div>
+            <div class="spending__day-sum"></div>
+          </li>
+          <li class="spending__graph-item" data-day="sat">
+            <div class="spending__day">sat</div>
+            <div class="graph"></div>
+            <div class="spending__day-sum"></div>
+          </li>
+          <li class="spending__graph-item" data-day="sun">
+            <div class="spending__day">sun</div>
+            <div class="graph"></div>
+            <div class="spending__day-sum"></div>
+          </li>
+        </ul>
+        <hr />
+        <div class="spending__month">
+          <div class="spending__month-curr">
+            <h3>Total this month</h3>
+            <p class="amount">$478.33</p>
+          </div>
+          <div class="spending__month-prev">
+            <h3>from last month</h3>
+            <p class="percentage">+2.4%</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>
+  </body>
 </html>
